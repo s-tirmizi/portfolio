@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EQWE Talha's Homepage</title>
+    <title>Talha's Homepage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
                 <img src="profile.jpg" alt="Talha's Profile Picture">
             </div>
             <h1>Talha</h1>
+            <p>PhD Student | Energy Engineering | Research Enthusiast</p>
         </div>
     </header>
     <div class="container">
@@ -61,5 +62,15 @@
             <p>&copy; 2024 Talha's Homepage. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
